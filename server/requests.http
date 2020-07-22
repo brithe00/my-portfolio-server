@@ -1,0 +1,64 @@
+### SERVER TEST
+GET http://localhost:8000
+
+# ===== POSTS ===== #
+
+### GET ALL POSTS
+GET http://localhost:8000/posts
+
+### GET A POST BY ID
+GET http://localhost:8000/posts/2
+
+### POST A POST
+POST http://localhost:8000/posts
+Content-Type: application/json
+
+{
+    "title": "bbbbbbbbbbbbbb",
+    "description": "This is bbbbbbbbbbbbbb",
+    "media": "img",
+    "link": "http://localhost:8000"
+}
+
+### UPDATE A POST BY ID
+PUT http://localhost:8000/posts/3
+Content-Type: application/json
+
+{
+    "title": "aaaAAAAA",
+    "description": "bBBBBBB",
+    "media": "aaaaaaa",
+    "link": "aaaaaaa"
+}
+
+### DELETE A POST BY ID
+DELETE http://localhost:8000/posts/2
+
+# ===== LANGUAGES ===== #
+
+### GET ALL LANGUAGES
+GET http://localhost:8000/languages
+
+### GET A LANGUAGE BY ID
+GET http://localhost:8000/languages/1
+
+### POST A LANGUAGE
+POST http://localhost:8000/languages
+Content-Type: application/json
+
+{
+    "name": "bbbbbbbbbbbbbb",
+    "media": "img"
+}
+
+### UPDATE A LANGUAGE BY ID
+PUT http://localhost:8000/languages/4
+Content-Type: application/json
+
+{
+    "name": "ccccccccccc",
+    "media": "img"
+}
+
+### DELETE A LANGUAGE BY ID
+DELETE http://localhost:8000/languages/4
