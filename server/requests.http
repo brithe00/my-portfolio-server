@@ -1,11 +1,12 @@
 ### SERVER TEST
 GET http://localhost:8000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTU0OTU2NjQsImV4cCI6MTU5NTU4MjA2NH0.bTyBP5GIUOdJgoPYcz4XgiotTNlKsBzNZBwmHUIC8GA
 
 # ===== POSTS ===== #
 
 ### GET ALL POSTS
 GET http://localhost:8000/posts
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTU0OTU2NjQsImV4cCI6MTU5NTU4MjA2NH0.bTyBP5GIUOdJgoPYcz4XgiotTNlKsBzNZBwmHUIC8GA
 ### GET A POST BY ID
 GET http://localhost:8000/posts/2
 
@@ -33,6 +34,7 @@ Content-Type: application/json
 
 ### DELETE A POST BY ID
 DELETE http://localhost:8000/posts/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTU0ODU5NDQsImV4cCI6MTU5NTU3MjM0NH0.QKlKpg7EzaeraLOw2BW1cFMsFaac3Svn874fVsKyo28
 
 # ===== LANGUAGES ===== #
 
@@ -62,3 +64,46 @@ Content-Type: application/json
 
 ### DELETE A LANGUAGE BY ID
 DELETE http://localhost:8000/languages/4
+
+# ===== USER ===== #
+
+### POST - REGISTER
+POST http://localhost:8000/users/register
+Content-Type: application/json
+
+{
+    "username": "brian",
+    "password": "secret"
+}
+
+### POST - LOGIN
+POST http://localhost:8000/users/login
+Content-Type: application/json
+
+{
+    "username": "brian",
+    "password": "secret"
+}
+
+###################################
+###################################
+
+### GET ALL POSTS AND ALL LANGUAGES
+GET http://localhost:8000/posts/languages
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTU0OTU2NjQsImV4cCI6MTU5NTU4MjA2NH0.bTyBP5GIUOdJgoPYcz4XgiotTNlKsBzNZBwmHUIC8GA
+
+### POST A POST AND LANGUAGES
+POST http://localhost:8000/posts/languages
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTU0OTU2NjQsImV4cCI6MTU5NTU4MjA2NH0.bTyBP5GIUOdJgoPYcz4XgiotTNlKsBzNZBwmHUIC8GA
+Content-Type: application/json
+
+{
+    "title": "bbbbbbbbbbbbbb",
+    "description": "This is bbbbbbbbbbbbbb",
+    "media": "img",
+    "link": "http://localhost:8000",
+    "name": "test,"
+}
+
+###################################
+###################################
