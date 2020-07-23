@@ -1,3 +1,6 @@
+### GET FOR EVERYONE
+GET http://localhost:8000/posts_visible
+
 ### SERVER TEST
 GET http://localhost:8000
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTU0OTU2NjQsImV4cCI6MTU5NTU4MjA2NH0.bTyBP5GIUOdJgoPYcz4XgiotTNlKsBzNZBwmHUIC8GA
@@ -9,6 +12,8 @@ GET http://localhost:8000/posts
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTU0OTU2NjQsImV4cCI6MTU5NTU4MjA2NH0.bTyBP5GIUOdJgoPYcz4XgiotTNlKsBzNZBwmHUIC8GA
 ### GET A POST BY ID
 GET http://localhost:8000/posts/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTU0OTU2NjQsImV4cCI6MTU5NTU4MjA2NH0.bTyBP5GIUOdJgoPYcz4XgiotTNlKsBzNZBwmHUIC8GA
+
 
 ### POST A POST
 POST http://localhost:8000/posts
@@ -22,7 +27,8 @@ Content-Type: application/json
 }
 
 ### UPDATE A POST BY ID
-PUT http://localhost:8000/posts/3
+PUT http://localhost:8000/posts/14
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTU0OTU2NjQsImV4cCI6MTU5NTU4MjA2NH0.bTyBP5GIUOdJgoPYcz4XgiotTNlKsBzNZBwmHUIC8GA
 Content-Type: application/json
 
 {
@@ -34,7 +40,7 @@ Content-Type: application/json
 
 ### DELETE A POST BY ID
 DELETE http://localhost:8000/posts/2
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTU0ODU5NDQsImV4cCI6MTU5NTU3MjM0NH0.QKlKpg7EzaeraLOw2BW1cFMsFaac3Svn874fVsKyo28
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTU1MDA3OTksImV4cCI6MTU5NTU4NzE5OX0.-3pjHxLE-lkunm0MIFMoA4JsxIcI0TSFiO2fc-7evc4
 
 # ===== LANGUAGES ===== #
 
