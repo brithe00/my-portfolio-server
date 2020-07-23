@@ -20,7 +20,7 @@ CREATE TABLE `post`(
 CREATE TABLE `language`(
     `id` INT NOT NULL AUTO_INCREMENT,
     `name` VARCHAR (100) NOT NULL,
-    `media` VARCHAR (500) NOT NULL,
+    `media` VARCHAR (1000) NOT NULL,
     PRIMARY KEY (`id`)
 );
 
@@ -40,11 +40,15 @@ CREATE TABLE `language_post` (
 
 /* ===== Insertions ===== */
 
-INSERT INTO post (`id`, `title`, `description`, `media`, `link`, `date_created`, `date_updated`) VALUES (1, 'My first project', 'This is my first project', 'myimage', 'http://localhost:8000', null, null),
-(2, 'My second project', 'This is my second project', 'myimage', 'http://localhost:8000', null, null),
-(3, 'My third project', 'This is my third project', 'myimage', 'http://localhost:8000', null, null);
+INSERT INTO post (`id`, `title`, `description`, `media`, `link`, `date_created`, `date_updated`) VALUES (1, 'Sacré Campus', 'Sacré Campus référence les différents lieux stratégiques autour du campus de la Wild Reims afin de vous aider dans vos déplacements.', 'https://zupimages.net/up/20/30/mbja.png', 'https://brianlag.github.io/sacre-campus/', null, null);
+INSERT INTO post (`id`, `title`, `description`, `media`, `link`, `date_created`, `date_updated`) VALUES (2, 'GitHub Fighters', 'GitHub Fighters est une application web ayant pour but de réaliser un combat entre les utilisateurs de la plateforme GitHub utilisant les données du profil (repos, gists, followers, following).', 'https://www.zupimages.net/up/20/30/0ao5.png', 'https://projet-2-github-fighters.netlify.app/', null, null);
+INSERT INTO post (`id`, `title`, `description`, `media`, `link`, `date_created`, `date_updated`) VALUES (3, 'Tonton Sommelier', 'Tonton Sommelier est une start-up qui à pour but de faire découvrir le monde de l oenologie dans un cadre ludique et évolutif. Le projet est associé à un jeu de plateau qui va favoriser l interactivité avec l application. Visée communautaire.', 'https://zupimages.net/up/20/30/7sfo.png', 'https://tontonsommelier.com/', null, null);
+INSERT INTO post (`id`, `title`, `description`, `media`, `link`, `date_created`, `date_updated`) VALUES (4, 'The Confined Traveller - Hackathon #1', 'The Confined Traveller vous propose de découvrir les collections du Metropolitan Museum of Art selon les départements du musée. Il existe également notre sélection personnelle.', 'https://zupimages.net/up/20/30/rrag.png', 'https://laughing-joliot-98b470.netlify.app/', null, null);
+INSERT INTO post (`id`, `title`, `description`, `media`, `link`, `date_created`, `date_updated`) VALUES (5, 'KiDoc - Hackathon #2 - Finaliste', 'KiDoc est une application destinée aux enfants malades, supervisée par les parents proposant une liste de tâches à réaliser (traitement régulier...)', 'https://www.zupimages.net/up/20/30/y7yw.png', 'https://www.linkedin.com/in/brian-thellier/', null, null);
 
-INSERT INTO language (`id`, `name`, `media`) VALUES (1, 'JavaScript', 'myicon'), (2, 'Ruby', 'myicon'), (3, 'PHP', 'myicon');
+INSERT INTO language (`id`, `name`, `media`) VALUES (1, 'JavaScript', 'image'), (2, 'ReactJS', 'image'), (3, 'NodeJS', 'image');
+
+/* INSERT INTO language_post (`post_id`, `language_id`) VALUES (1, 2), (1, 3), (2, 1), (3, 2);*/
 
 /* ===== Contraintes ===== */
 
