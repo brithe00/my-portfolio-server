@@ -22,6 +22,18 @@ const languages = require('../routes/languages.js');
 app.use('/posts', authenticateWithJwt, posts);
 app.use('/languages', authenticateWithJwt, languages);
 
+/* ----- GET ALL POSTS WITH NO TOKEN ----- */
+
+app.get('/posts_visible',(req, res) =>{
+  connection.query('SELECT * FROM post', (err, results) => {
+    if (err) {
+      res.status(500).send({ message: 'Erreur lors de la récupération des posts !' });
+    } else {
+      res.status(200).json(results);
+    }
+  });
+});
+
 /* ----- REGISTER ----- */
 
 app.post('/users/register', (req, res) => {
