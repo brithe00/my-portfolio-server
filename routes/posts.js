@@ -81,4 +81,16 @@ router.delete('/:id', (req, res) => {
     });
 });
 
+/*
+router.get('/languages', (req, res) => {
+  connection.query('SELECT post.id, title, description, post.media, link, date_created, date_updated, language.name FROM post JOIN language ON post.id=language.id', (err, results) => {
+    if (err) {
+      res.status(500).send({ message: 'Erreur lors de la récupération des informations !' });
+    } else {
+      res.status(200).json(results);
+    }
+  });
+})
+*/
+
 module.exports = router;
